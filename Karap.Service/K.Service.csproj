@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\K.DTO\K.DTO.csproj" />
+    <ProjectReference Include="..\K.Model\K.Model.csproj" />
+    <ProjectReference Include="..\K.Shared\K.Shared.csproj" />
+    <ProjectReference Include="..\Karapinha.DAL\K.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

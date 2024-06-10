@@ -1,0 +1,6 @@
+@WebAPI_KarapinhaXPRO_Original_HostAddress = http://localhost:5016
+
+GET {{WebAPI_KarapinhaXPRO_Original_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
