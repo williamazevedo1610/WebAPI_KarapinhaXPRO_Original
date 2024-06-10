@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\K.DTO\K.DTO.csproj" />
+    <ProjectReference Include="..\K.Shared\K.Shared.csproj" />
+    <ProjectReference Include="..\Karap.Service\K.Service.csproj" />
     <ProjectReference Include="..\Karapinha.DAL\K.DAL.csproj" />
   </ItemGroup>
 

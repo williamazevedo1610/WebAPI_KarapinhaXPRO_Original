@@ -1,4 +1,8 @@
 using K.DAL.Context;
+using K.DAL.Repository;
+using K.Service;
+using K.Shared.IRepository;
+using K.Shared.IService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +13,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddTransient<ICategoriaRepository,CategoriaRepository>();
+builder.Services.AddTransient<ICategoriaService,CategoriaService>();
 
 var conn = builder.Configuration.GetValue("conn", builder.Configuration.GetConnectionString("Conn"));
 
