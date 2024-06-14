@@ -11,12 +11,11 @@ namespace K.Model
 	public class Servico
 	{
 		[Key]
-		public int MyProperty { get; set; }
+		public int IdServico { get; set; }
 		public String ?Descricao { get; set; }
 		public double Preco { get; set; }
 		public int CategoriaID {  get; set; }
 		[ForeignKey(nameof(CategoriaID))]
-
 		public Categoria Categoria { get; set; }
 		
 	}

@@ -14,13 +14,30 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Cateorias
 builder.Services.AddTransient<ICategoriaRepository,CategoriaRepository>();
 builder.Services.AddTransient<ICategoriaService,CategoriaService>();
+
+//Servicos
+builder.Services.AddTransient<IServicoRepository, ServicoRepository>();
+builder.Services.AddTransient<IServicoService,ServicoService>();
+
+//Utilizadores
+builder.Services.AddTransient<IUtilizadorRepository, UtilizadorRepository>();
+builder.Services.AddTransient<IUtilizadorService, UtilizadorService>();
+
+//Profissional
+builder.Services.AddTransient<IProfissionalRepository, ProfissionalRepository>();
+builder.Services.AddTransient<IProfissionalService, ProfissionalService>();
+
+
 
 var conn = builder.Configuration.GetValue("conn", builder.Configuration.GetConnectionString("Conn"));
 
 builder.Services.AddDbContext<KarapinhaContext>(o=>o.UseSqlServer(conn,b=>b.MigrationsAssembly(
 	typeof(KarapinhaContext).Assembly.FullName)));
+
+
 
 var app = builder.Build();
 
